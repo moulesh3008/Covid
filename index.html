@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>COVID-20</title>
+  </head>
+  <body>
+
+    <section class="banner" id="sec">
+      <header>
+        <a href="#" class="logo">Covid-20</a>
+        <div id="toggle" onclick="toggle()"></div>
+      </header>
+      <div class="content">
+        <h2>To prevent the spread of COVID-19:</h2>
+        <p>Clean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Wear a mask when physical distancing is not possible.
+            Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention.</p>
+        <a href="https://www.google.com/search?sxsrf=ALeKk00aGIfgOVadmAfF7kWcWSJWumwD0g%3A1610001066485&source=hp&ei=qqr2X7LIG7Sxmge94b7gAw&iflsig=AINFCbYAAAAAX_a4ukp9Yz7LxUcIkE0ADBt5VA56hSrs&q=covid-19+prevention&oq=co&gs_lcp=CgZwc3ktYWIQARgAMgQIIxAnMgQIIxAnMgQIIxAnMggIABCRAhCLAzIICAAQkQIQiwMyCAgAELEDEIMBMgUIABCxAzIICAAQsQMQgwEyBQgAELEDMgIIADoLCAAQyQMQkQIQiwNQkiRY4yRgxTNoAHAAeACAAZ4BiAGNApIBAzAuMpgBAKABAaoBB2d3cy13aXq4AQM&sclient=psy-ab">Know more</a>
+      </div>
+      <ul class="sci">
+        <li><a href="https://www.facebook.com/profile.php?id=100004349119082"><img src="facebook.png"></a></li>
+        <li><a href="#"><img src="mail.png"></a></li>
+        <li><a href="#"><img src="twitter.png"></a></li>
+      </ul>
+    </section>
+    <div id="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#Home">Present Cases</a></li>
+        <li><a href="#">Vaccine Places</a></li>
+        <li><a href="#Contact">Need Help?</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+    function toggle() {
+      var sec = document.getElementById('sec');
+      var con = document.getElementById('con');
+      var nav = document.getElementById('navigation');
+      sec.classList.toggle('active');
+      con.classList.toggle('active');
+      nav.classList.toggle('active');
+      nav.classList.toggle('before');
+    }
+    </script>
+
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <div class="change-country">change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src="close.svg" alt="" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    <script src="countries.js"></script>
+    <script src="app.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="contact-form"><a name="Contact"></a>
+      <h1>Help !!!</h1>
+      <form name="Reg" class="txt">
+      <div class="txtb">
+        <label>Full Name :  <sup>*</sup> </label>
+        <input type="text" name="" value="" placeholder="Enter ur name">
+      </div>
+      <div class="txtb">
+        <label>Email : </label>
+        <input type="email" name="" value="" placeholder="Enter ur Email">
+      </div>
+      <div class="txtb">
+        <label>Phone Number : </label>
+        <input type="number" name="" value="" placeholder="Enter ur Phone number">
+      </div>
+      <div class="txtb">
+        <label>Message : </label>
+        <textarea placeholder="Message"></textarea>
+      </div>
+      <a class="btn">Register</a>
+      </form>
+    </div>
+  </body>
+</html>
